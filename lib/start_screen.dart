@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
-  const StartScreen(this.color1, this.color2, {super.key});
+  const StartScreen(this.startQuiz, this.color1, this.color2, {super.key});
 
   final Color color1;
   final Color color2;
+  final void Function() startQuiz;
 
-  const StartScreen.purple({super.key})
+  const StartScreen.purple(this.startQuiz, {super.key})
       : color1 = Colors.deepPurple,
         color2 = Colors.purple;
 
-  startQuiz() {}
   @override
   Widget build(context) {
     return Container(
